@@ -1,0 +1,6 @@
+# IntelliJ
+.idea/
+java-pilha-alura.iml
+
+# Build files
+out/
