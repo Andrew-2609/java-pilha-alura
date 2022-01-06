@@ -1,10 +1,16 @@
 package core;
 
+import exceptions.MinhaExcecao;
+
 public class Fluxo {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
-        metodo1();
+        try {
+            metodo1();
+        } catch (MinhaExcecao rex) {
+            System.out.println(rex.getMessage());
+        }
         System.out.println("Fim do main");
     }
 
@@ -16,10 +22,10 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
-        }
-        System.out.println("Fim do metodo2");
+
+        throw new MinhaExcecao(">> Deu errado aqui <<");
+
+        //System.out.println("Fim do metodo2");
     }
 
 }
