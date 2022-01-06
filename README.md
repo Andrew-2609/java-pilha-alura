@@ -1,3 +1,3 @@
 # Stacks - Java
 
-Simple project covering the Exceptions matter in Java, based on Alura's course.
+Simple project covering Exceptions in Java, based on Alura's course.
