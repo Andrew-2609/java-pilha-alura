@@ -6,7 +6,14 @@ public class TesteConexao {
 
     public static void main(String[] args) {
 
-        Conexao conexao = new Conexao();
+        try (Conexao conexao = new Conexao()) {
+            conexao.lerDados();
+        } catch (IllegalStateException ies) {
+            System.out.println("Deu erro na conexão");
+        }
+
+
+        /*Conexao conexao = new Conexao();
 
         try {
             conexao.lerDados();
@@ -14,7 +21,7 @@ public class TesteConexao {
             System.out.println("Deu erro na conexão");
         } finally {
             conexao.fechar();
-        }
+        }*/
     }
 
 }
