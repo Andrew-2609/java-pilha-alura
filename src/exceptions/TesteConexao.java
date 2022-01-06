@@ -4,6 +4,7 @@ import core.Conexao;
 
 public class TesteConexao {
 
+    @SuppressWarnings("CommentedOutCode")
     public static void main(String[] args) {
 
         try (Conexao conexao = new Conexao()) {
